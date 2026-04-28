@@ -57,7 +57,7 @@
  ├─ .github/
  │   ├─ workflows/
  │   ├─ ISSUE_TEMPLATE/
- │   └─ PULLREQUESTTEMPLATE.md
+ │   └─ PULL_REQUEST_TEMPLATE.md
  ├─ README.md
  └─ LICENSE
 ```

@@ -1,0 +1,57 @@
+:root {
+  --bg: #0a0a0f;
+  --fg: #e0e0e0;
+  --accent: #00eaff;
+  --accent2: #ff0077;
+  --font: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.subtitle {
+  margin-top: -10px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+}
+
+.btn-secondary {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.05);
+}

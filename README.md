@@ -41,7 +41,7 @@
 
 ### 🏗️ Architecture du projet
 ```text
-/CyberTech
+~CyberTech/
  ├─ /docs
  │   ├─ index.html
  │   ├─ style.css
@@ -49,11 +49,11 @@
  │   ├─ /components
  │   │    ├─ header.html
  │   │    └─ footer.html
- │   ├─ /assets
- │   │    ├─ icons/
- │   │    ├─ images/
- │   │    └─ avatars/
  │   └─ README.md
+ ├─ /assets
+ │    ├─ icons/
+ │    ├─ images/
+ │    └─ avatars/
  ├─ .github/
  │   ├─ workflows/
  │   ├─ ISSUE_TEMPLATE/

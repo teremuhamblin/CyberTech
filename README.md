@@ -6,7 +6,7 @@
 # ⚡ CyberTech 
 - — Plateforme modulaire cyber technologique & IA
 
->CyberTech est une plateforme web modulaire dédiée aux technologies avancées : cybersécurité, intelligence artificielle, automatisation, systèmes critiques et design system moderne.  
+CyberTech est une plateforme web modulaire dédiée aux technologies avancées : cybersécurité, intelligence artificielle, automatisation, systèmes critiques et design system moderne.  
 - Le projet propose une architecture propre, scalable et maintenable, pensée pour évoluer vers un véritable écosystème cyber‑tech.
 - CyberTech sert de base technique, de laboratoire d’expérimentation et de vitrine pour des modules IA, des outils cyber, des dashboards, des composants réutilisables et des interfaces futuristes.
 
@@ -16,11 +16,13 @@
 - Construire une infrastructure web modulaire compatible GitHub Pages  
 - Développer une identité cyber‑tech forte (UI/UX, animations, design system)  
 - Intégrer des composants dynamiques (SPA, injection de layout, modules IA)  
-- Offrir une base solide pour des projets avancés :  
+- Offrir une base solide pour des projets avancés :
+```md
   - outils d’analyse  
   - dashboards cyber  
   - assistants IA  
-  - systèmes automatisés  
+  - systèmes automatisés
+```
 - Servir de hub central pour tes projets techniques GitHub
 
 ---
@@ -40,8 +42,8 @@
 ---
 
 ### 🏗️ Architecture du projet
-
-~CyberTech/
+```text
+CyberTech/
  ├─ /docs
  │   ├─ index.html
  │   ├─ style.css
@@ -64,7 +66,7 @@
  ├─ README.md
  ├─ LICENCE
  └─ .gitkeep
-
+```
 
 ---
 

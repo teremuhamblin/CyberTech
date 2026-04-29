@@ -40,7 +40,7 @@
 ---
 
 ### 🏗️ Architecture du projet
-```text
+
 ~CyberTech/
  ├─ /docs
  │   ├─ index.html
@@ -50,17 +50,21 @@
  │   │    ├─ header.html
  │   │    └─ footer.html
  │   └─ README.md
+ │   └─ .gitkeep
  ├─ /assets
  │    ├─ icons/
  │    ├─ images/
  │    └─ avatars/
+ │   └─ .gitkeep
  ├─ .github/
  │   ├─ workflows/
  │   ├─ ISSUE_TEMPLATE/
  │   └─ PULL_REQUEST_TEMPLATE.md
+ │   └─ .gitkeep
  ├─ README.md
- └─ LICENSE
-```
+ ├─ LICENCE
+ └─ .gitkeep
+
 
 ---
 

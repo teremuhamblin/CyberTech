@@ -12,34 +12,50 @@ const routes = {
 /* Charger une vue */
 async function loadView(path) {
   const target = document.getElementById("app-root");
-  const url = routes[path] || routes["/"];
-  const res = await fetch(url);
-  const html = await res.text();
-  target.innerHTML = html;
+  if (!target) return console.error("❌ app-root introuvable");
 
-  updateActiveLink(path);
+  const url = routes[path] || routes["/"];
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Erreur HTTP ${res.status}`);
+
+    const html = await res.text();
+    target.innerHTML = html;
+
+    updateActiveLink(path);
+
+  } catch (err) {
+    console.error("❌ Erreur de chargement de vue :", err);
+    target.innerHTML = `
+      <div class="card">
+        <h2>Erreur</h2>
+        <p>Impossible de charger la vue <strong>${path}</strong>.</p>
+      </div>
+    `;
+  }
 }
 
-/* Gestion des liens SPA */
+/* Gestion des clics SPA */
 function onNavClick(e) {
   const link = e.target.closest("[data-route]");
   if (!link) return;
 
   e.preventDefault();
-  const path = link.getAttribute("data-route");
+  const path = link.dataset.route;
 
   history.pushState({ path }, "", path);
   loadView(path);
 }
 
-/* Lien actif */
+/* Mise à jour du lien actif */
 function updateActiveLink(path) {
   document.querySelectorAll(".nav-main__link").forEach((el) => {
     el.classList.toggle("nav-main__link--active", el.dataset.route === path);
   });
 }
 
-/* Popstate */
+/* Gestion du bouton retour navigateur */
 window.addEventListener("popstate", (e) => {
   const path = (e.state && e.state.path) || "/";
   loadView(path);
@@ -47,24 +63,25 @@ window.addEventListener("popstate", (e) => {
 
 /* Injection header/footer */
 async function injectLayout() {
-  document.getElementById("header-root").innerHTML =
-    await (await fetch("components/header.html")).text();
+  try {
+    const headerRoot = document.getElementById("header-root");
+    const footerRoot = document.getElementById("footer-root");
 
-  document.getElementById("footer-root").innerHTML =
-    await (await fetch("components/footer.html")).text();
+    if (!headerRoot || !footerRoot) {
+      return console.error("❌ header-root ou footer-root introuvable");
+    }
+
+    headerRoot.innerHTML = await (await fetch("components/header.html")).text();
+    footerRoot.innerHTML = await (await fetch("components/footer.html")).text();
+
+  } catch (err) {
+    console.error("❌ Erreur d’injection layout :", err);
+  }
 }
 
-/* Init */
+/* Initialisation */
 window.addEventListener("DOMContentLoaded", async () => {
   await injectLayout();
   loadView(location.pathname || "/");
   document.addEventListener("click", onNavClick);
 });
-async function loadComponent(id, file) {
-  const container = document.getElementById(id);
-  const response = await fetch(`components/${file}`);
-  container.innerHTML = await response.text();
-}
-
-loadComponent("header", "header.html");
-loadComponent("footer", "footer.html");

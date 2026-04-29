@@ -7,7 +7,7 @@
 - style.css — Design system cyber‑tech
 - script.js — Injection SPA
 - /components — Header & footer modulaires
-- /assets — Icônes, images, avatars
+- /.github — Autres documentaions
 
 ### Déploiement
 ```md

@@ -1,3 +1,155 @@
+/* ===========================
+   CYBERTECH DESIGN SYSTEM v1.0
+   =========================== */
+
+:root {
+  --color-bg: #050510;
+  --color-surface: #101225;
+  --color-surface-alt: #15172f;
+  --color-primary: #00ffd5;
+  --color-secondary: #7b5cff;
+  --color-danger: #ff3366;
+  --color-text: #e4e7ff;
+  --color-muted: #7a80a0;
+
+  --font-display: "Orbitron", system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+}
+
+/* Background global */
+.cyber-bg {
+  background: radial-gradient(circle at top, #15172f 0, #050510 60%, #000 100%);
+  color: var(--color-text);
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+
+.nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  background: radial-gradient(circle at top left, #1b1b3a 0, #050510 60%, #000 100%);
+  border-bottom: 1px solid rgba(0, 255, 200, 0.25);
+}
+
+.nav-main__brand {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.nav-main__links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.nav-main__link {
+  position: relative;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color 0.2s ease-out, transform 0.15s ease-out;
+}
+
+.nav-main__link:hover {
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.nav-main__link--active {
+  color: var(--color-primary);
+}
+
+.nav-main__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  padding: var(--space-4);
+  text-align: center;
+  color: var(--color-muted);
+  border-top: 1px solid rgba(0, 255, 200, 0.15);
+  margin-top: var(--space-6);
+}
+
+/* ===========================
+   CARDS
+   =========================== */
+
+.card {
+  background: radial-gradient(circle at top left, #15172f 0, #050510 70%);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(123, 92, 255, 0.35);
+  padding: var(--space-4);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.7);
+}
+
+/* ===========================
+   DASHBOARD
+   =========================== */
+
+.dash__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+  padding: var(--space-4);
+}
+
+.dash__kpi {
+  position: relative;
+  overflow: hidden;
+}
+
+.dash__kpi::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(
+    from 180deg,
+    rgba(0, 255, 213, 0.1),
+    transparent,
+    rgba(123, 92, 255, 0.1),
+    transparent
+  );
+  animation: dashGlow 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes dashGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dash__kpi-value {
+  font-size: 2rem;
+  font-family: var(--font-display);
+  color: var(--color-primary);
+}
 :root {
   --bg: #0a0a0f;
   --fg: #e0e0e0;

@@ -1,0 +1,31 @@
+{
+  "name": "cybertech",
+  "version": "1.2.0",
+  "description": "CyberTech v1.2 — SPA IA cyber-tech animée, stylée, modulaire et avancée.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.html --fix",
+    "format": "prettier --write .",
+    "test": "echo \"CyberTech: aucun test défini\"",
+    "assets": "node script/build-assets.js",
+    "bundle": "vite build && node script/minify.js",
+    "cyber:optimize": "npm run format && npm run lint && npm run bundle"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "gsap": "^3.12.2",
+    "marked": "^12.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-html": "^8.0.0",
+    "prettier": "^3.2.0",
+    "terser": "^5.30.0"
+  },
+  "author": "Teremu",
+  "license": "MIT"
+}

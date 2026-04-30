@@ -1,4 +1,5 @@
 ## 📜 Changelog
+## 🔮 Première étapes (v1.0)
 ### Added
 - [x] Architecture modulaire complète
 - [x] Design System v1
@@ -18,9 +19,23 @@
 - [x] Problèmes de navigation
 - [x] Harmonisation CSS
 
-## 🔮 Prochaines étapes (v1.1)
-- [ ] Modules avancés
-- [ ] Dashboard v2
-- [ ] Animations neon
-- [ ] Mode ultra‑dark
-- [ ] Tracking amélioré
+## 🔮 Deuxièmes étapes (v1.1)
+- [x] Modules avancés
+- [x] Dashboard v2
+- [x] Animations neon
+- [x] Mode ultra‑dark
+- [x] Tracking amélioré
+
+## 🔮 Troisièmes étapes (v1.2)
+- [x] Optimisation du chargement des modules JS
+- [x] Réduction du temps d’affichage du dashboard
+- [x] Amélioration du Theme Engine (switch plus fluide)
+- [x] Ajustement des animations neon (intensité + vitesse)
+- [x] Mise à jour du mode Ultra‑Dark (contraste renforcé)
+- [x] Correction de bugs mineurs sur le tracking
+- [x] Nettoyage du CSS obsolète
+- [x] Harmonisation des composants UI
+- [x] Ajout de micro‑interactions sur les boutons
+- [x] Préparation de la base pour la v1.3
+
+

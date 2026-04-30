@@ -1,0 +1,9 @@
+# Code Owners
+
+# Le propriétaire principal du projet
+* @teremuhamblin 
+
+# Dossiers critiques
+assets/ @teremuhamblin 
+docs/ @teremuhamblin 
+.github/ @teremuhamblin 

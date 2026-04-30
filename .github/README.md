@@ -1,0 +1,8 @@
+# .github/
+
+Ce dossier contient les éléments nécessaires au bon fonctionnement du projet sur GitHub :
+- Templates d’issues et de pull requests
+- Workflows d’intégration continue
+- Fichiers de sécurité et contribution
+
+Aucun code applicatif ici : uniquement l’infrastructure GitHub.

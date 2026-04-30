@@ -1,0 +1,27 @@
+<div class="spork-secret">
+  <h1>🌀 Cyber‑Psionic Spork</h1>
+  <p>Artefact psionique classé niveau 7. Réagit aux impulsions mentales.</p>
+
+  <img id="psionic-spork" src="/assets/img/cyber-psionic-spork.svg" />
+
+  <button id="charge">Charger</button>
+  <button id="release">Décharger</button>
+
+  <pre id="output"></pre>
+</div>
+
+<script type="module">
+  import { CyberPsionicSpork } from "../modules/cyber-psionic-spork.js";
+  import { animatePsionicSpork } from "../components/psionic-spork-visual.js";
+
+  const spork = new CyberPsionicSpork();
+  animatePsionicSpork("#psionic-spork");
+
+  document.querySelector("#charge").onclick = () => {
+    output.textContent = spork.charge();
+  };
+
+  document.querySelector("#release").onclick = () => {
+    output.textContent = spork.release();
+  };
+</script>

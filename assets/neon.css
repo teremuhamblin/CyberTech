@@ -1,0 +1,16 @@
+:root {
+  --neon-primary: #00eaff;
+  --neon-intensity: 0.8;
+  --neon-speed: 1.2s;
+}
+
+.neon-glow {
+  box-shadow: 0 0 12px var(--neon-primary);
+  animation: neonPulse var(--neon-speed) infinite alternate;
+}
+
+@keyframes neonPulse {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+`

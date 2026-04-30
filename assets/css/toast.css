@@ -1,0 +1,7 @@
+.toast {
+  background: var(--accent);
+  padding: 8px 14px;
+  border-radius: 4px;
+  margin: 10px;
+}
+`

@@ -1,7 +1,7 @@
 {
   "name": "cybertech",
   "version": "1.2.0",
-  "description": "CyberTech v1.2 — SPA IA cyber-tech animée, stylée, modulaire et avancée.",
+  "description": "CyberTech v1.2 — Interfaces animée, stylée, modulaire et avancée.",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
